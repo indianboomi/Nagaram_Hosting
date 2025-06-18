@@ -61,11 +61,3 @@ app.get('/dashboard', (req, res) => {
     <br><a href="/logout">Logout</a>
   `);
 });
-
-app.get('/logout', (req, res) => {
-  req.session.destroy(() => {
-    res.redirect('/');
-  });
-});
-
-app.listen(PORT, () => console.log(`Dashboard running on http://localhost:${PORT}`));
