@@ -56,8 +56,7 @@ app.get('/dashboard', (req, res) => {
   if (!req.session.user) return res.redirect('/');
   const user = req.session.user;
   res.send(`
-    <h1>Welcome, ${user.username}#${user.discriminator}</h1>
-    <img src="https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png" width="100">
-    <br><a href="/logout">Logout</a>
-  `);
-});
+  <h1>Welcome, ${user.username}#${user.discriminator}</h1>
+  <img src="https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png" width="100">
+  <br><a href="/logout">Logout</a>
+`);
