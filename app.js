@@ -60,3 +60,4 @@ app.get('/dashboard', (req, res) => {
   <img src="https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png" width="100">
   <br><a href="/logout">Logout</a>
 `);
+res.sendFile(__dirname + '/views/dashboard.html');
