@@ -61,3 +61,16 @@ app.get('/dashboard', (req, res) => {
   <br><a href="/logout">Logout</a>
 `);
 res.sendFile(__dirname + '/views/dashboard.html');
+const html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>...same HTML from above...</head>
+<body>
+  <!-- rest of the HTML -->
+  <h1>Welcome, ${user.username}#${user.discriminator}</h1>
+  <img src="https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png" width="100" alt="User Avatar" />
+</body>
+</html>
+`;
+
+res.send(html);
